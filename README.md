@@ -1,4 +1,4 @@
-I created this project for learning cutting edge technologies. All code is working properly bearing provided steps are followed correctly.
+I created this project for learning cutting edge technologies. All code is working properly if provided steps are followed correctly.
 
 --> Build docker image:
 1. docker build --tag sampleapp
@@ -9,7 +9,7 @@ I created this project for learning cutting edge technologies. All code is worki
 3. docker push username/my-repo
 
 --> Kubernetes deployment steps:
-1. deployment.yaml contains all detail required to deploy this app and running on kubernetes
+1. deployment.yaml contains all details required to deploy this app and running on kubernetes
 2. kubectl apply -f deployment.yaml
 3. kubectl get deployments
 4. kubectl get pods

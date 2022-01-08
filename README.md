@@ -14,3 +14,7 @@ I created this project for learning cutting edge technologies. All code is worki
 3. kubectl get deployments
 4. kubectl get pods
 5. kubectl get services
+
+Install Kubernetes on linux:
+https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+

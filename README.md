@@ -1,4 +1,4 @@
-I created this project for learning cutting edge technologies. All code in working properly bearing provided steps are followed correctly.
+I created this project for learning cutting edge technologies. All code is working properly bearing provided steps are followed correctly.
 
 --> Build docker image:
 1. docker build --tag sampleapp

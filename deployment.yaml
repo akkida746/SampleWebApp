@@ -1,0 +1,21 @@
+#https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleapp
+spec:
+  selector:
+    matchLabels:
+      app: sampleapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sampleapp
+    spec:
+      containers:
+        - name: sampleapp
+          image: sampleapp
+          ports:
+            - containerPort: 80

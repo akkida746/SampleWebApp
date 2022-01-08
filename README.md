@@ -1,1 +1,13 @@
 I created this project for learning cutting edge technologies. All code in working properly bearing provided steps are followed correctly.
+
+--> Build docker image:
+1. docker build --tag sampleapp
+
+--> Push docker image to dockerhub:
+1. docker login --username username
+2. docker tag my-image username/my-repo
+3. docker push username/my-repo
+
+--> Kubernetes deployment steps:
+1. deployment.yaml contains all detail required to deploy this app and running on kubernetes
+2. 

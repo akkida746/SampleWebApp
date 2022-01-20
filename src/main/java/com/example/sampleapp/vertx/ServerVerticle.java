@@ -24,6 +24,11 @@ public class ServerVerticle extends AbstractVerticle {
 
         });
 
+        //http://localhost:8081/vertx
+        router.get("/vertx").handler(handler->{
+            handler.response().end("Greeting from Vertx!");
+        });
+
         httpServer.requestHandler(router::accept).listen(8081);
 
     }

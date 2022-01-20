@@ -17,7 +17,7 @@ public class ServerVerticle extends AbstractVerticle {
 
         Router router = Router.router(vertx);
 
-        router.route().produces("application/json").handler(routingContext -> {
+        router.route().handler(routingContext -> {
             final HttpServerResponse response = routingContext.response();
             response.putHeader("content-type", "text/plain");
             vertx.eventBus().send("user", "hello", reply -> response.end(Json.encode(reply.result().body())));

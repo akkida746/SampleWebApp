@@ -11,7 +11,7 @@ public class Config {
     @Bean
     public Vertx createVertx() {
         Vertx vertx = Vertx.vertx();
-        //vertx.eventBus().registerDefaultCodec(User.class, new UserMessageCodec());
+        vertx.eventBus().registerDefaultCodec(User.class, new UserMessageCodec());
         return vertx;
     }
 }

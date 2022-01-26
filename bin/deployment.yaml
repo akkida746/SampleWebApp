@@ -1,0 +1,35 @@
+#https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleapp
+spec:
+  selector:
+    matchLabels:
+      app: sampleapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sampleapp
+    spec:
+      containers:
+        - name: sampleapp
+          image: akkida746/sampleapp
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: sampleapp
+spec:
+  type: LoadBalancer
+  selector:
+    app: sampleapp
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+      nodePort: 31000
